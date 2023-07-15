@@ -40846,7 +40846,7 @@ a.u-link.u-text-hover-grey-90:hover {
         
         
         
-        --theme-sheet-width-xl: 1140px;
+        --theme-sheet-width-xl: 1280px;
         --theme-sheet-width-lg: 940px;
         --theme-sheet-width-md: 720px;
         --theme-sheet-width-sm: 540px;
@@ -41345,13 +41345,13 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-header .u-sheet-1 {
-  min-height: 117px;
+  min-height: 109px;
 }
 
 .u-header .u-image-1 {
-  width: 535px;
-  height: 43px;
-  margin: 23px auto 0;
+  width: 368px;
+  height: 29px;
+  margin: 44px auto 0;
 }
 
 .u-header .u-logo-image-1 {
@@ -41360,86 +41360,80 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-header .u-menu-1 {
-  margin: 7px auto;
+  margin: 0 auto;
 }
 
 .u-header .u-nav-1 {
   font-size: 1rem;
+  letter-spacing: normal;
 }
 
-.u-header .u-nav-3 {
+.u-header .u-nav-2 {
   font-size: 1.25rem;
 }
 @media (max-width: 1199px) {
   .u-header .u-sheet-1 {
-    min-height: 119px;
+    min-height: 86px;
   }
 
   .u-header .u-image-1 {
-    width: 534px;
-    height: 42px;
-    margin-top: 25px;
+    width: 370px;
+    height: 28px;
+    margin-top: 30px;
   }
 
   .u-header .u-menu-1 {
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
-
-  .u-header .u-nav-1 {
-    letter-spacing: normal;
+    margin-top: 0;
   }
 }
 @media (max-width: 991px) {
   .u-header .u-sheet-1 {
-    min-height: 90px;
+    min-height: 82px;
   }
 
   .u-header .u-image-1 {
-    width: 534px;
-    height: 42px;
-    margin-top: 24px;
+    margin-top: 41px;
   }
 
   .u-header .u-menu-1 {
     width: auto;
-    margin-top: -37px;
-    margin-right: 24px;
-    margin-bottom: 28px;
+    margin-top: -34px;
+    margin-right: 57px;
+    margin-bottom: 7px;
   }
 }
 @media (max-width: 767px) {
   .u-header .u-sheet-1 {
-    min-height: 81px;
+    min-height: 95px;
   }
 
   .u-header .u-image-1 {
-    width: 400px;
-    height: 32px;
-    margin-top: 25px;
+    width: 384px;
+    height: 30px;
+    margin-top: 33px;
   }
 
   .u-header .u-menu-1 {
-    margin-top: -32px;
-    margin-right: 0;
-    margin-bottom: 25px;
+    margin-top: -35px;
+    margin-right: 13px;
+    margin-bottom: 28px;
   }
 }
 @media (max-width: 575px) {
   .u-header .u-sheet-1 {
-    min-height: 71px;
+    min-height: 68px;
   }
 
   .u-header .u-image-1 {
     width: 274px;
-    height: 22px;
-    margin-top: 25px;
+    height: 21px;
+    margin-top: 32px;
   }
 
   .u-header .u-menu-1 {
-    margin-top: -27px;
-    margin-right: -16px;
-    margin-bottom: 20px;
+    margin-top: -26px;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
  .u-footer {
