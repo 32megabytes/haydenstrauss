@@ -1,7 +1,3 @@
- .u-section-1 {
-  background-image: linear-gradient(white, #f9e79b);
-}
-
 .u-section-1 .u-sheet-1 {
   min-height: 100vh;
 }
@@ -20,22 +16,6 @@
 .u-section-1 .u-form-1 {
   height: 358px;
   margin: 25px 25px 60px 365px;
-}
-
-.u-section-1 .u-form-group-1 {
-  width: 100%;
-}
-
-.u-section-1 .u-form-group-2 {
-  width: 100%;
-}
-
-.u-section-1 .u-form-group-3 {
-  width: 100%;
-}
-
-.u-section-1 .u-form-group-4 {
-  width: 100%;
 }
 
 @media (max-width: 1199px) {
