@@ -1183,6 +1183,7 @@ a {
 .cid-u59zw4c7Fi .navbar-dropdown {
   padding: 0;
   background-color: #ffffff !important;
+  position: fixed;
 }
 .cid-u59zw4c7Fi .opacityScroll {
   background: #ffffff !important;
@@ -2064,7 +2065,7 @@ a {
   position: fixed;
 }
 .cid-u59zw4c7Fi .opacityScroll {
-  background: rgba(255, 255, 255, 0) !important;
+  background: #ffffff !important;
 }
 .cid-u59zw4c7Fi a.nav-link {
   display: flex;
