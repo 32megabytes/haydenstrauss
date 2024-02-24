@@ -1183,10 +1183,9 @@ a {
 .cid-u59zw4c7Fi .navbar-dropdown {
   padding: 0;
   background-color: #ffffff !important;
-  position: fixed;
 }
 .cid-u59zw4c7Fi .opacityScroll {
-  background: rgba(255, 255, 255, 0) !important;
+  background: #ffffff !important;
 }
 .cid-u59zw4c7Fi a.nav-link {
   display: flex;
@@ -1350,9 +1349,9 @@ a {
   }
 }
 .cid-u59L6HBI7y {
-  padding-top: 6rem;
+  padding-top: 8rem;
   padding-bottom: 6rem;
-  background-color: #edefeb;
+  background-color: #757b62;
 }
 .cid-u59L6HBI7y .item {
   margin-bottom: 2rem;
@@ -1607,6 +1606,10 @@ a {
 }
 .cid-u59L6HBI7y H3 {
   text-align: center;
+  color: #ffffff;
+}
+.cid-u59L6HBI7y H4 {
+  color: #ffffff;
 }
 .cid-u5a0KsC1Nh {
   padding-top: 5rem;
