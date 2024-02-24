@@ -7,7 +7,7 @@
       "title": "StartM5",
       "titlePreset": "StartM5",
       "styling": {
-        "primaryColor": "#9fe870",
+        "primaryColor": "#ffa600",
         "secondaryColor": "#d70081",
         "successColor": "#3a341c",
         "infoColor": "#320707",
@@ -55,8 +55,8 @@
         "file": "@PROJECT_PATH@/fonts/Goldoni_DEMO/font.ttf"
       }
     ],
-    "favicon": false,
-    "mbrsiteDomain": "0kuxsl3gs8",
+    "favicon": "@PROJECT_PATH@/assets/images/icon.png",
+    "mbrsiteDomain": "9hfythp6hp",
     "imageResize": false,
     "usedWebp": false,
     "robotsSwitcher": false,
