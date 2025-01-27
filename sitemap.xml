@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://haydenstrauss.com/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+<loc>https://haydenstrauss.com/</loc>
+</url>
+<url>
+<loc>https://haydenstrauss.com/reader.html</loc>
+<lastmod>2025-01-27T17:58:11-05:00</lastmod>
+</url>
+<url>
+<loc>https://haydenstrauss.com/about.html</loc>
+<lastmod>2025-01-27T18:02:13-05:00</lastmod>
+<image:image>
+<image:loc>https://haydenstrauss.com/media/posts/14/ArArea51Rampart8927under-construction-2.gif</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+</url>
+</urlset>

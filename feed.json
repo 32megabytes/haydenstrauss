@@ -1,0 +1,29 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Hayden Strauss",
+    "description": "",
+    "home_page_url": "https://haydenstrauss.com",
+    "feed_url": "https://haydenstrauss.com/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Hayden"
+    },
+    "items": [
+        {
+            "id": "https://haydenstrauss.com/reader.html",
+            "url": "https://haydenstrauss.com/reader.html",
+            "title": "Reader",
+            "summary": "Reads any English input via realistic AI narration. Each output is downloadable in compressed WAV format. This tool was created as part of a larger project named MyCompass. It's running solely on a Ryzen 5500 and RTX 3060, so pls don't abuse it.",
+            "content_html": "<p>Reads any English input via realistic AI narration. Each output is downloadable in compressed WAV format. This tool was created as part of a larger project named <a href=\"https://2artisans.github.io/mycompass/\">MyCompass</a>. It's running solely on a Ryzen 5500 and RTX 3060, so pls don't abuse it.</p>\n<p> </p>\n<iframe loading=\"lazy\" width=\"100%\" height=\"640\" id=\"dynamic-iframe\" src=\"https://web.hydn.cc/reader/\" frameborder=\"0\" data-responsive=\"false\"></iframe>",
+            "author": {
+                "name": "Hayden"
+            },
+            "tags": [
+                   "tool",
+                   "accessibility"
+            ],
+            "date_published": "2025-01-27T17:55:00-05:00",
+            "date_modified": "2025-01-27T17:58:11-05:00"
+        }
+    ]
+}

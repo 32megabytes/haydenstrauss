@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>Hayden Strauss</title>
+    <link href="https://haydenstrauss.com/feed.xml" rel="self" />
+    <link href="https://haydenstrauss.com" />
+    <updated>2025-01-27T17:58:11-05:00</updated>
+    <author>
+        <name>Hayden</name>
+    </author>
+    <id>https://haydenstrauss.com</id>
+
+    <entry>
+        <title>Reader</title>
+        <author>
+            <name>Hayden</name>
+        </author>
+        <link href="https://haydenstrauss.com/reader.html"/>
+        <id>https://haydenstrauss.com/reader.html</id>
+            <category term="tool"/>
+            <category term="accessibility"/>
+
+        <updated>2025-01-27T17:55:00-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Reads any English input via realistic AI narration. Each output is downloadable in compressed WAV format. This tool was created as part of a larger project named MyCompass. It's running solely on a Ryzen 5500 and RTX 3060, so pls don't abuse it.
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Reads any English input via realistic AI narration. Each output is downloadable in compressed WAV format. This tool was created as part of a larger project named <a href="https://2artisans.github.io/mycompass/">MyCompass</a>. It's running solely on a Ryzen 5500 and RTX 3060, so pls don't abuse it.</p>
+<p> </p>
+<iframe loading="lazy" width="100%" height="640" id="dynamic-iframe" src="https://web.hydn.cc/reader/" frameborder="0" data-responsive="false"></iframe>
+            ]]>
+        </content>
+    </entry>
+</feed>
