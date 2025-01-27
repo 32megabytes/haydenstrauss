@@ -2,22 +2,22 @@
     {
         "path": "404.html",
         "type": "file",
-        "md5": "911cf80f9384af7f0cb6753bd1ffc3bd"
+        "md5": "17438024d014db71e886cd1370063d3c"
     },
     {
         "path": "feed.json",
         "type": "file",
-        "md5": "3ba6de229f92f7d03af4f6ed50815fde"
+        "md5": "3d5ec97971fa997dd0c8bc684d6acb4f"
     },
     {
         "path": "feed.xml",
         "type": "file",
-        "md5": "ac8978bdcc9c3e95982cda01e0ecb702"
+        "md5": "9217f7edbf01cdc0ef6b3045a04070a5"
     },
     {
         "path": "index.html",
         "type": "file",
-        "md5": "2f498851212136a54f325ff0e1f282f5"
+        "md5": "683f5529b77d68d5fb579df95dbf0a4a"
     },
     {
         "path": "media",
@@ -82,7 +82,7 @@
     {
         "path": "sitemap.xml",
         "type": "file",
-        "md5": "32f07a24ef997074f0c74c6f870cfde8"
+        "md5": "29beb0f96922349526b75daf939df4fd"
     },
     {
         "path": "sitemap.xsl",
@@ -92,12 +92,12 @@
     {
         "path": "reader.html",
         "type": "file",
-        "md5": "c4345c41718bc0e8241db011b410ca7e"
+        "md5": "17b6e0c6c645c0359ed3145faf62e185"
     },
     {
         "path": "about.html",
         "type": "file",
-        "md5": "85e6d313836f482336c2e9d699f78a53"
+        "md5": "3bae8b4414748ffc430913778d8f4246"
     },
     {
         "path": "tags",
@@ -112,7 +112,7 @@
     {
         "path": "/tags/accessibility/index.html",
         "type": "file",
-        "md5": "da9ab7c1a937019961295a2cfa69aa4c"
+        "md5": "13f3fee62499f3d2dd4baebd7f8f1e3c"
     },
     {
         "path": "tags/tool",
@@ -122,12 +122,12 @@
     {
         "path": "/tags/tool/index.html",
         "type": "file",
-        "md5": "d351cc241e6d6254b116901bf6cf18c6"
+        "md5": "0610640b81dde7786153193bf5690229"
     },
     {
         "path": "/tags/index.html",
         "type": "file",
-        "md5": "effb8d0afe7941e01369dcbd309e84e4"
+        "md5": "f2ef7eb8bc707ef27bbac0ddc24d1977"
     },
     {
         "path": "authors",
@@ -142,7 +142,7 @@
     {
         "path": "/authors/2artisans/index.html",
         "type": "file",
-        "md5": "539e95532a5fe4abfea3cdbe90592902"
+        "md5": "a38c026911729eccfe3918be3b03d72f"
     },
     {
         "path": "assets",
