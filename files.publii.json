@@ -2,22 +2,22 @@
     {
         "path": "404.html",
         "type": "file",
-        "md5": "244db4c6d82945e9c7f8644ed0beefb5"
+        "md5": "911cf80f9384af7f0cb6753bd1ffc3bd"
     },
     {
         "path": "feed.json",
         "type": "file",
-        "md5": "6e08e839c04ab18754624c91d46008a8"
+        "md5": "3ba6de229f92f7d03af4f6ed50815fde"
     },
     {
         "path": "feed.xml",
         "type": "file",
-        "md5": "b422cfaf16efc7f5351956149030e673"
+        "md5": "ac8978bdcc9c3e95982cda01e0ecb702"
     },
     {
         "path": "index.html",
         "type": "file",
-        "md5": "75ad5e129f53877e19c5fc130aed05d4"
+        "md5": "2f498851212136a54f325ff0e1f282f5"
     },
     {
         "path": "media",
@@ -92,12 +92,12 @@
     {
         "path": "reader.html",
         "type": "file",
-        "md5": "9991212b5026ff6f10554eabfbc5c2aa"
+        "md5": "c4345c41718bc0e8241db011b410ca7e"
     },
     {
         "path": "about.html",
         "type": "file",
-        "md5": "c7c72fc9cdc36e7ab4b2fdf845f77977"
+        "md5": "85e6d313836f482336c2e9d699f78a53"
     },
     {
         "path": "tags",
@@ -112,7 +112,7 @@
     {
         "path": "/tags/accessibility/index.html",
         "type": "file",
-        "md5": "36b72504e007a55743277a1fc2775b1e"
+        "md5": "da9ab7c1a937019961295a2cfa69aa4c"
     },
     {
         "path": "tags/tool",
@@ -122,12 +122,12 @@
     {
         "path": "/tags/tool/index.html",
         "type": "file",
-        "md5": "739b6d20b77ba4706de0d2bdf51c0b1f"
+        "md5": "d351cc241e6d6254b116901bf6cf18c6"
     },
     {
         "path": "/tags/index.html",
         "type": "file",
-        "md5": "35e0586f5024a98b4b87cb18a2efa3ca"
+        "md5": "effb8d0afe7941e01369dcbd309e84e4"
     },
     {
         "path": "authors",
@@ -142,7 +142,7 @@
     {
         "path": "/authors/2artisans/index.html",
         "type": "file",
-        "md5": "6ecf53590740ed563fead1ba6a757905"
+        "md5": "539e95532a5fe4abfea3cdbe90592902"
     },
     {
         "path": "assets",
