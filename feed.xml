@@ -3,12 +3,36 @@
     <title>Hayden Strauss</title>
     <link href="https://haydenstrauss.com/feed.xml" rel="self" />
     <link href="https://haydenstrauss.com" />
-    <updated>2025-01-27T18:14:12-05:00</updated>
+    <updated>2025-01-28T21:22:02-05:00</updated>
     <author>
         <name>Hayden</name>
     </author>
     <id>https://haydenstrauss.com</id>
 
+    <entry>
+        <title>InScribe</title>
+        <author>
+            <name>Hayden</name>
+        </author>
+        <link href="https://haydenstrauss.com/reader-2.html"/>
+        <id>https://haydenstrauss.com/reader-2.html</id>
+            <category term="Tool"/>
+            <category term="Accessibility"/>
+
+        <updated>2025-01-28T20:43:06-05:00</updated>
+            <summary>
+                <![CDATA[
+                    InScribe is best experienced in a standalone format. Click here to maximise InScribe into a new tab. InScribe is a journaling and note-taking app designed for ease of use. All data is stored on the user's device, no account needed. This means you must export&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <iframe loading="lazy" width="100%" height="640" id="dynamic-iframe" src="https://haydenstrauss.com/serve/inscribe/" frameborder="0" data-responsive="false"></iframe>
+<p class="align-center"><a href="https://haydenstrauss.com/serve/InScribe" target="_blank" rel="noopener noreferrer"><strong>InScribe is best experienced in a standalone format. Click here to maximise InScribe into a new tab.</strong></a></p>
+<p>InScribe is a journaling and note-taking app designed for ease of use. All data is stored on the user's device, no account needed. <strong>This means you must export your save file to avoid data loss. </strong>Planned features include cloud-based storage syncing and mobile device support. </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Reader</title>
         <author>
@@ -29,7 +53,7 @@
             <![CDATA[
                 <p>Reads any English text via realistic AI narration. Each output is downloadable in compressed WAV format. This tool was created as part of a larger project named <a href="https://2artisans.github.io/mycompass/">MyCompass</a>. It's running solely on a Ryzen 5500 and RTX 3060, so pls don't abuse it.</p>
 <p> </p>
-<iframe loading="lazy" width="100%" height="640" id="dynamic-iframe" src="https://web.hydn.cc/reader/" frameborder="0" data-responsive="false"></iframe>
+<iframe loading="lazy" width="100%" height="640" id="dynamic-iframe" src="https://web.hydn.cc/mycompass/reader/" frameborder="0" data-responsive="false"></iframe>
             ]]>
         </content>
     </entry>

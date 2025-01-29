@@ -1,0 +1,430 @@
+/* styles.css */
+
+
+/* Group vault-specific buttons */
+#delete-vault-item,
+#minimize-vault {
+  padding: 0.625rem;
+  margin: 0; /* Remove margin since we're using gap */
+  background-color: #ffe4b5;
+  color: black;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: 'Constantia', serif;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  width: 100%; /* Ensure consistent width */
+}
+
+/* Update hover effects to match */
+#delete-vault-item:hover,
+#minimize-vault:hover {
+  background-color: #f5d599;
+}
+
+/* Update common button styles to exclude vault buttons */
+.formatting-menu button,
+.sidebar-buttons button,
+.books-list button,
+#delete-book {  /* Removed vault buttons from here */
+  padding: 0.625rem;
+  margin: 0.3125rem 0;
+  background-color: #ffe4b5;  
+  color: black;              
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: 'Constantia', serif;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+/* Update hover effects selector accordingly */
+.formatting-menu button:hover,
+.sidebar-buttons button:hover,
+.books-list button:hover,
+#delete-book:hover {  /* Removed vault buttons from here */
+  background-color: #f5d599;
+}
+
+/* Keep icon styling consistent */
+.formatting-menu button img,
+.sidebar-buttons button img,
+.books-list button img,
+#delete-vault-item img,
+#delete-book img {
+  margin-right: 0.5rem;
+  height: 1.5em;
+  width: auto;
+}
+
+
+/* Main container */
+.main-content {
+  width: 90%;
+  padding: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-bg-color);
+  height: calc(100% - 1.25rem);
+}
+
+/* Content wrapper - holds text area and vault */
+.content-wrapper {
+  display: flex;
+  gap: 0.625rem;
+  height: calc(100% - 4rem); /* Account for formatting menu height + its padding/margin */
+  min-height: 0;
+}
+
+/* Text editor */
+#text-box {
+  flex: 1;
+  background-image: url('lib/img/textbg.png');
+  background-repeat: repeat;
+  padding: 0.625rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3125rem;
+  overflow-y: auto;
+}
+
+/* Vault sidebar */
+.vault-sidebar {
+  width: 15.625rem;
+  padding: 0.625rem;
+  background-color: #8b4513;
+  color: white;
+  border-radius: 0.3125rem;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 1.25rem); /* Account for padding */
+}
+
+.vault-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  justify-content: space-between; /* This ensures proper spacing */
+}
+
+.vault-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 0.625rem;
+  min-height: 0;
+}
+
+.vault-buttons {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+#open-vault.hidden {
+  display: none;
+}
+
+/* File name text wrapping */
+.vault-item span {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.vault-tabs {
+  display: flex;
+  gap: 0.3125rem;
+  margin-bottom: 0.625rem;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 0.3125rem;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.tab-button.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.vault-content {
+  overflow-y: auto;
+}
+
+.vault-content.hidden {
+  display: none;
+}
+
+.vault-date-group {
+  margin: 15px 0;
+}
+
+.vault-date-header {
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.vault-item span {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: calc(15.625rem - 3.125rem); /* Account for icon width and padding */
+}
+
+.vault-item {
+  display: flex;
+  align-items: center;
+  padding: 0.3125rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.vault-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.vault-item img {
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-right: 0.625rem;
+}
+
+.vault-item.selected {
+  background-color: rgba(139, 0, 0, 0.5) !important;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.gallery-item.selected {
+  background-color: rgba(139, 0, 0, 0.5) !important;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #8b4513;
+  color: white;
+  padding: 1.25rem;
+  border-radius: 0.3125rem;
+  min-width: 18.75rem;
+}
+
+.modal-content button {
+  background-color: #ffe4b5;
+  color: black;
+  border: none;
+  padding: 0.625rem;
+  margin: 0.3125rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  font-family: 'Constantia', serif;
+  font-size: 1rem;
+  width: calc(100% - 0.625rem);
+}
+
+
+.setting-item {
+  margin: 0.9375rem 0;
+}
+
+
+/* Books List  */
+
+@font-face {
+  font-family: 'Constantia';
+  src: url('lib/font/constantia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Constantia', serif;
+  background-image: 
+    url('lib/img/bg-overlay.png'),
+    url('lib/img/bgtile.png');
+  background-position: center, top left;
+  background-size: cover, auto;
+  background-repeat: no-repeat, repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar {
+  width: 15.625rem;
+  padding: 0.625rem;
+  background-color: #8b4513;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.books-list {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.books-list h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.books-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.books-list li {
+  padding: 0.5rem; 
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.books-list li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.books-list li.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-buttons button,
+.books-list button {
+  width: 100%;
+  padding: 0.625rem;
+  margin: 0.3125rem 0;
+  background-color: #ffe4b5;
+  color: black;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: 'Constantia', serif;
+  font-size: 1rem;
+}
+
+.sidebar-buttons button img,
+.books-list button img {
+  margin-right: 10px;
+}
+
+
+.formatting-menu {
+  display: flex;
+  margin-top: 0.325rem;
+  gap: 0.625rem;
+  margin-bottom: 0.325rem;
+  height: 3rem;
+}
+
+.formatting-menu button {
+  background-color: #8b4513;
+  color: white;
+  border: none;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: 'Constantia', serif;
+  font-size: 1rem;
+}
+
+
+.formatting-menu button img {
+  margin-right: 5px;
+}
+
+
+
+/* Icon Styling */
+.icon {
+  height: 1.5em;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+/* Hide icons on mobile */
+@media (max-width: 768px) {
+  .icon {
+    display: none;
+  }
+}
+
+/* For settings modal inputs */
+.setting-item {
+  margin: 0.9375rem 0;
+  font-size: 1rem;
+}
+
+.setting-item label {
+  display: block;
+  margin-bottom: 0.3125rem;
+}
+
+.setting-item input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 0.625rem;
+}
+
+.setting-item select {
+  font-size: 1rem;
+  padding: 0.3125rem;
+  border-radius: 0.3125rem;
+}
+
+/* Fullscreen Mode */
+
+.container {
+  display: flex;
+  width: 90%;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.container.fullscreen {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
