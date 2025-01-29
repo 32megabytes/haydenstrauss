@@ -2,7 +2,7 @@
     {
         "path": "404.html",
         "type": "file",
-        "md5": "a9c5bb151dc4586659f1681c0232e44e"
+        "md5": "16982cfe9a1145387176af7f33d8d427"
     },
     {
         "path": "feed.json",
@@ -17,7 +17,7 @@
     {
         "path": "index.html",
         "type": "file",
-        "md5": "5e8211df2b5e8b2f98436989b4112ad1"
+        "md5": "325b613df912589a2789fe4db21f883e"
     },
     {
         "path": "media",
@@ -92,17 +92,17 @@
     {
         "path": "reader.html",
         "type": "file",
-        "md5": "2717520f7579ba2bf1b547b1a9516a00"
+        "md5": "d61be80bb30704c60d3b8d244a4d66e5"
     },
     {
         "path": "about.html",
         "type": "file",
-        "md5": "59259a363482c90fd1e827ea9e162e9e"
+        "md5": "9a319f75ebd99e8b6bab7937e5e2f929"
     },
     {
         "path": "inscribe.html",
         "type": "file",
-        "md5": "91a34e5d6c466858f6507d602f625252"
+        "md5": "6c8a294dc61e45751893b4c5d9045e6e"
     },
     {
         "path": "tags",
@@ -117,7 +117,7 @@
     {
         "path": "/tags/accessibility/index.html",
         "type": "file",
-        "md5": "02d07c5a3f4c857e2cc0bd4ad8f14378"
+        "md5": "dc790d17c7edade69a725f8d2aa0ab50"
     },
     {
         "path": "tags/tool",
@@ -127,12 +127,12 @@
     {
         "path": "/tags/tool/index.html",
         "type": "file",
-        "md5": "4e5d93ee138c7cc77efe9eb521f39f56"
+        "md5": "e56073f63dbc68c2df67d9e0d53fc712"
     },
     {
         "path": "/tags/index.html",
         "type": "file",
-        "md5": "3ff534c434f469e3b4acc51a61f288a0"
+        "md5": "7710d4d5b1ce0e88e8e83441cefd8f59"
     },
     {
         "path": "authors",
@@ -147,7 +147,7 @@
     {
         "path": "/authors/2artisans/index.html",
         "type": "file",
-        "md5": "7c806caf77d40db5b24c67467a723bce"
+        "md5": "d8313ecbbf1289f403c7b08eacffa2be"
     },
     {
         "path": "assets",
