@@ -19,37 +19,35 @@
   <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
-      <div class="books-list">
-        <h3>InScribe Books:</h3>
-        <ul id="books-list">
-          <!-- Dynamically populated list of books -->
-        </ul>
-        <button id="new-book">
-          <img src="lib/icons/new-icon.png" alt="New Book" class="icon"> New Book
-        </button>
-        <button id="save-book">
-          <img src="lib/icons/save-icon.png" alt="Save Open Book" class="icon"> Save Current Book
-        </button>
-        <button id="rename-book">
-          <img src="lib/icons/rename-icon.png" alt="Rename Open Book" class="icon"> Rename Current Book
-        </button>
-		
-		<button id="delete-book" class="delete-button">
-  <img src="lib/icons/delete-icon.png" alt="Delete Book" class="icon"> Delete Current Book
-</button>
-		
-        <button id="settings-button">
-          <img src="lib/icons/settings-icon.png" alt="Settings" class="icon"> Settings
-        </button>
-		
-		      <button id="read-selection">
-          <img src="lib/icons/audio-icon.png" alt="Read Selection" class="icon"> Read Selection
-        </button>
-		
-		<button id="open-vault" class="hidden">
-  <img src="lib/icons/vault-icon.png" alt="Open Vault" class="icon"> Open Vault
-</button>
-      </div>
+  <div class="books-list">
+  <h3>InScribe Books:</h3>
+  <div class="books-list-container">
+    <ul id="books-list">
+      <!-- Dynamically populated list of books -->
+    </ul>
+  </div>
+  <button id="new-book">
+    <img src="lib/icons/new-icon.png" alt="New Book" class="icon"> New Book
+  </button>
+  <button id="save-book">
+    <img src="lib/icons/save-icon.png" alt="Save Open Book" class="icon"> Save Current Book
+  </button>
+  <button id="rename-book">
+    <img src="lib/icons/rename-icon.png" alt="Rename Open Book" class="icon"> Rename Current Book
+  </button>
+  <button id="delete-book" class="delete-button">
+    <img src="lib/icons/delete-icon.png" alt="Delete Book" class="icon"> Delete Current Book
+  </button>
+  <button id="settings-button">
+    <img src="lib/icons/settings-icon.png" alt="Settings" class="icon"> Settings
+  </button>
+  <button id="read-selection">
+    <img src="lib/icons/audio-icon.png" alt="Read Selection" class="icon"> Read Selection
+  </button>
+  <button id="open-vault" class="hidden">
+    <img src="lib/icons/vault-icon.png" alt="Open Vault" class="icon"> Open Vault
+  </button>
+</div>
       <div class="sidebar-buttons">
         <button id="import-file">
           <img src="lib/icons/import-icon.png" alt="Import" class="icon"> Load from File
@@ -91,7 +89,7 @@
 
       <div class="content-wrapper">
         <!-- Text Input Box -->
-        <div id="text-box" contenteditable="true"></div>
+        <div id="text-box" contenteditable="true" spellcheck="true"></div>
         
         <!-- Vault Sidebar -->
 <div class="vault-sidebar">
@@ -117,32 +115,37 @@
 </div>
 
   <!-- Settings Modal -->
-  <div id="settings-modal" class="modal hidden">
-    <div class="modal-content">
-      <h2>Settings</h2>
-   <div class="setting-item">
-  <label>
-    <input type="checkbox" id="autosave-toggle"> Enable Auto-save
-  </label>
-</div>
-<div class="setting-item">
-  <label>
-    <input type="checkbox" id="fullscreen-toggle"> Full Screen Mode
-  </label>
-</div>
-<div class="setting-item">
-  <label>UI Scale:</label>
-  <select id="ui-scale">
-    <option value="100" selected>100%</option>
-    <option value="125">125%</option>
-    <option value="150">150%</option>
-    <option value="175">175%</option>
-    <option value="200">200%</option>
-  </select>
-</div>
-      <button id="save-settings">Save Settings</button>
-      <button id="close-settings">Close</button>
+<div id="settings-modal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Settings</h2>
+    <div class="setting-item">
+      <label>
+        <input type="checkbox" id="autosave-toggle"> Enable Auto-save
+      </label>
     </div>
+    <div class="setting-item">
+      <label>
+        <input type="checkbox" id="fullscreen-toggle"> Full Screen Mode
+      </label>
+    </div>
+    <div class="setting-item">
+      <label>
+        <input type="checkbox" id="spellcheck-toggle"> Enable Spellcheck
+      </label>
+    </div>
+    <div class="setting-item">
+      <label>UI Scale:</label>
+      <select id="ui-scale">
+        <option value="100" selected>100%</option>
+        <option value="125">125%</option>
+        <option value="150">150%</option>
+        <option value="175">175%</option>
+        <option value="200">200%</option>
+      </select>
+    </div>
+    <button id="save-settings">Save Settings</button>
+    <button id="close-settings">Close</button>
   </div>
+</div>
 </body>
 </html>

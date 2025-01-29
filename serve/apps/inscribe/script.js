@@ -24,6 +24,8 @@ const openVaultButton = document.getElementById('open-vault');
 const vaultSidebar = document.querySelector('.vault-sidebar');
 const sterilizeButton = document.getElementById('sterilize-button');
 const readSelectionButton = document.getElementById('read-selection');
+const spellcheckToggle = document.getElementById('spellcheck-toggle');
+
   
   // Formatting buttons
   const boldButton = document.getElementById('bold-button');
@@ -39,7 +41,8 @@ const readSelectionButton = document.getElementById('read-selection');
   let settings = {
     autosave: true,
     uiScale: defaultScale,
-    fullscreen: true
+    fullscreen: true,
+	spellcheck: true,
   };
   let lastSavedContent = '';
   let autosaveTimer = null;
@@ -53,16 +56,24 @@ const readSelectionButton = document.getElementById('read-selection');
     document.documentElement.style.fontSize = `${baseSize * (scale / 100)}px`;
   }
   
-  // Initialize settings
-  function initializeSettings() {
-    const fullscreenToggle = document.getElementById('fullscreen-toggle');
-    autosaveToggle.checked = settings.autosave;
-    fullscreenToggle.checked = settings.fullscreen;
-    uiScaleSelect.value = settings.uiScale;
-    applyUIScale(settings.uiScale);
-    applyFullscreenMode(settings.fullscreen);
-  }
-  
+function initializeSettings() {
+  const fullscreenToggle = document.getElementById('fullscreen-toggle');
+  autosaveToggle.checked = settings.autosave;
+  fullscreenToggle.checked = settings.fullscreen;
+  // Fix: Use nullish coalescing operator to only default to true if undefined
+  spellcheckToggle.checked = settings.spellcheck ?? true;
+  uiScaleSelect.value = settings.uiScale;
+  applyUIScale(settings.uiScale);
+  applyFullscreenMode(settings.fullscreen);
+  applySpellcheck(settings.spellcheck);
+}
+
+// Apply spellcheck setting
+function applySpellcheck(enabled) {
+  textBox.spellcheck = enabled;
+}
+
+// Apply Fullscreen Setting  
   function applyFullscreenMode(enabled) {
     const container = document.querySelector('.container');
     if (enabled) {
@@ -150,7 +161,20 @@ openVaultButton.addEventListener('click', () => {
   italicButton.addEventListener('click', () => document.execCommand('italic'));
   underlineButton.addEventListener('click', () => document.execCommand('underline'));
   highlightButton.addEventListener('click', () => document.execCommand('hiliteColor', false, 'yellow'));
-  bulletList.addEventListener('click', () => document.execCommand('insertUnorderedList'));
+
+//  bullet list button handler 
+bulletList.addEventListener('click', () => {
+  const selection = window.getSelection();
+  if (!selection.rangeCount) return;
+  
+  const range = selection.getRangeAt(0);
+  const listItem = range.startContainer.closest('li');
+  
+  // If we're in a list item, don't create a new list
+  if (listItem) return;
+  
+  document.execCommand('insertUnorderedList');
+});
 
   // Book Management Event Listeners
   document.getElementById('new-book').addEventListener('click', () => {
@@ -192,18 +216,20 @@ openVaultButton.addEventListener('click', () => {
   document.getElementById('close-settings').addEventListener('click', () => {
     settingsModal.classList.add('hidden');
   });
-
-  document.getElementById('save-settings').addEventListener('click', () => {
-    const fullscreenToggle = document.getElementById('fullscreen-toggle');
-    settings.autosave = autosaveToggle.checked;
-    settings.fullscreen = fullscreenToggle.checked;
-    settings.uiScale = parseInt(uiScaleSelect.value);
-    applyUIScale(settings.uiScale);
-    applyFullscreenMode(settings.fullscreen);
-    startAutosave();
-    settingsModal.classList.add('hidden');
-  });
-
+  
+// Saves all settings
+document.getElementById('save-settings').addEventListener('click', () => {
+  const fullscreenToggle = document.getElementById('fullscreen-toggle');
+  settings.autosave = autosaveToggle.checked;
+  settings.fullscreen = fullscreenToggle.checked;
+  settings.spellcheck = spellcheckToggle.checked;
+  settings.uiScale = parseInt(uiScaleSelect.value);
+  applyUIScale(settings.uiScale);
+  applyFullscreenMode(settings.fullscreen);
+  applySpellcheck(settings.spellcheck);
+  startAutosave();
+  settingsModal.classList.add('hidden');
+});
   // Vault Management
   const vaultListView = document.getElementById('vault-list-view');
   const vaultGalleryView = document.getElementById('vault-gallery-view');
@@ -544,44 +570,46 @@ deleteBookButton.addEventListener('click', () => {
     }
   });
 
-  // Unsaved Changes Warning
-  window.addEventListener('beforeunload', (e) => {
-    if (currentBookIndex !== -1 && textBox.innerHTML !== lastSavedContent) {
-      e.preventDefault();
-      e.returnValue = '';
-    }
-  });
-
 // Add the sterilize text functionality
 sterilizeButton.addEventListener('click', () => {
   const selection = window.getSelection();
+  
+  if (selection.rangeCount === 0) return;
   const range = selection.getRangeAt(0);
   
   if (selection.toString().length > 0) {
-    // If text is selected, only sterilize that text
-    const span = document.createElement('span');
-    span.textContent = selection.toString(); // This creates clean text
-    range.deleteContents();
-    range.insertNode(span);
+    // If text is selected, sterilize that text
+    // Store the selected text content
+    const selectedText = selection.toString();
     
-    // Remove the span element but keep its contents
-    const parent = span.parentNode;
-    while (span.firstChild) {
-      parent.insertBefore(span.firstChild, span);
-    }
-    parent.removeChild(span);
-  } else {
-    // If no text is selected, sterilize at cursor
-    const textNode = document.createTextNode('\u200B'); // Zero-width space
+    // Delete the formatted content
+    range.deleteContents();
+    
+    // Insert clean text node
+    const textNode = document.createTextNode(selectedText);
     range.insertNode(textNode);
     
-    // Create a new range around the cursor position
+    // Select the newly inserted text
     const newRange = document.createRange();
     newRange.selectNode(textNode);
     selection.removeAllRanges();
     selection.addRange(newRange);
     
-    // Execute removeFormat command
+    // Remove all formatting from the selection
+    document.execCommand('removeFormat', false, null);
+  } else {
+    // If no text is selected, set up clean formatting at cursor
+    const textNode = document.createTextNode('\u200B'); // Zero-width space
+    range.insertNode(textNode);
+    
+    // Position cursor after the zero-width space
+    const newRange = document.createRange();
+    newRange.setStartAfter(textNode);
+    newRange.collapse(true);
+    selection.removeAllRanges();
+    selection.addRange(newRange);
+    
+    // Remove formatting at cursor position
     document.execCommand('removeFormat', false, null);
   }
   
@@ -605,23 +633,30 @@ async function handleTextToSpeech(text) {
     const result = await response.json();
 
     if (response.ok) {
-  const audioUrl = result.audio_url;
+     const audioUrl = result.audio_url;
       
-      // Fetch the audio file and convert to data URL
-      const audioResponse = await fetch(audioUrl);
-      const audioBlob = await audioResponse.blob();
-      
-      // Convert blob to data URL
-      const reader = new FileReader();
-      reader.readAsDataURL(audioBlob);
-      
-      reader.onload = () => {
-        // Create a new vault item with the actual audio data
+      try {
+        // Fetch the WAV file
+        const audioResponse = await fetch(audioUrl);
+        if (!audioResponse.ok) throw new Error('Failed to fetch audio file');
+        
+        // Get the audio data as a blob
+        const audioBlob = await audioResponse.blob();
+        
+        // Convert blob to base64 data URL
+        const dataUrl = await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = reject;
+          reader.readAsDataURL(audioBlob);
+        });
+
+        // Create vault item with the actual audio data
         const newItem = {
           id: Date.now().toString(),
           name: `Audio_${new Date().toISOString().slice(0, 19)}.wav`,
           type: 'audio/wav',
-          data: reader.result,
+          data: dataUrl,  // This contains the actual WAV file data
           thumbnail: 'lib/icons/audio-icon.png',
           dateAdded: new Date().toISOString()
         };
@@ -629,47 +664,11 @@ async function handleTextToSpeech(text) {
         vaultItems.push(newItem);
         updateVaultView();
         saveCurrentBook();
-      };
 
-
-     // Open audio player in new window
-      const newWindow = window.open('', '_blank', 'width=400,height=200');
-      newWindow.document.write(`
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Audio Player</title>
-          <style>
-            body {
-              margin: 0;
-              padding: 20px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              min-height: 100vh;
-              background-color: #ffe4b5;
-              font-family: 'Arial', sans-serif;
-            }
-            #audio-container {
-              width: 100%;
-              max-width: 400px;
-            }
-            audio {
-              width: 100%;
-            }
-          </style>
-        </head>
-        <body>
-          <div id="audio-container">
-            <audio src="${audioUrl}" controls autoplay></audio>
-          </div>
-        </body>
-        </html>
-      `);
-      newWindow.document.close();
-
+      } catch (error) {
+        console.error('Error processing audio file:', error);
+        alert('Error processing audio file. Please try again.');
+      }
     } else {
       alert(`Error: ${result.error}`);
     }
@@ -694,6 +693,106 @@ readSelectionButton.addEventListener('click', () => {
   
   handleTextToSpeech(selectedText);
 });
+
+// Bullet list event
+textBox.addEventListener('keydown', (e) => {
+  // Get the current selection
+  const selection = window.getSelection();
+  if (!selection.rangeCount) return;
+  
+  const range = selection.getRangeAt(0);
+  const listItem = range.startContainer.closest('li');
+  
+  // Only proceed if we're in a list item
+  if (!listItem) return;
+
+  if (e.key === 'Tab') {
+    e.preventDefault(); // Prevent default tab behavior
+    
+    if (!e.shiftKey) {
+      // Normal tab - indent if possible
+      const parentList = listItem.closest('ul');
+      const previousSibling = listItem.previousElementSibling;
+      
+      if (previousSibling) {
+        // Check if previous sibling already has a nested list
+        let targetList = previousSibling.querySelector('ul');
+        
+        if (!targetList) {
+          // Create new nested list if it doesn't exist
+          targetList = document.createElement('ul');
+          previousSibling.appendChild(targetList);
+        }
+        
+        // Move current item to nested list
+        targetList.appendChild(listItem);
+      }
+    } else {
+      // Shift+Tab - outdent if possible
+      const parentList = listItem.parentElement;
+      const grandparentListItem = parentList.closest('li');
+      
+      if (grandparentListItem) {
+        // Move item after its parent list item
+        grandparentListItem.parentElement.insertBefore(listItem, grandparentListItem.nextElementSibling);
+        
+        // Clean up empty nested lists
+        if (!parentList.children.length) {
+          parentList.remove();
+        }
+      }
+    }
+  } else if (e.key === 'Backspace') {
+    const listContent = listItem.textContent.trim();
+    const caretAtStart = isCaretAtStart(listItem);
+    
+    if (caretAtStart) {
+      e.preventDefault(); // Prevent default backspace behavior
+      
+      const parentList = listItem.closest('ul');
+      const grandparentListItem = parentList.closest('li');
+      
+      if (grandparentListItem) {
+        // If nested, outdent the item
+        grandparentListItem.parentElement.insertBefore(listItem, grandparentListItem.nextElementSibling);
+        
+        // Clean up empty nested lists
+        if (!parentList.children.length) {
+          parentList.remove();
+        }
+      } else if (parentList && !listContent) {
+        // If at top level and empty, remove the list item
+        listItem.remove();
+        
+        // Clean up empty lists
+        if (!parentList.children.length) {
+          parentList.remove();
+        }
+        
+        // Insert a line break to maintain editing position
+        const br = document.createElement('br');
+        range.insertNode(br);
+        range.setStartAfter(br);
+        range.collapse(true);
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+    }
+  }
+});
+
+// bullet list Helper function to check if caret is at start of element
+function isCaretAtStart(element) {
+  const selection = window.getSelection();
+  if (!selection.rangeCount) return false;
+  
+  const range = selection.getRangeAt(0);
+  const preCaretRange = range.cloneRange();
+  preCaretRange.selectNodeContents(element);
+  preCaretRange.setEnd(range.startContainer, range.startOffset);
+  return preCaretRange.toString().trim().length === 0;
+}
+
 
   // Initialize
   initializeSettings();
