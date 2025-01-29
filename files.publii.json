@@ -7,12 +7,12 @@
     {
         "path": "feed.json",
         "type": "file",
-        "md5": "0ad2447a7ad50e55fae72a3c8e298727"
+        "md5": "27bdf48e9e51813534d60e6f3df01416"
     },
     {
         "path": "feed.xml",
         "type": "file",
-        "md5": "e18e7e5c04b0ca5a54b5247f6a3f9848"
+        "md5": "50452e7ac98563d42e0af219f422f18f"
     },
     {
         "path": "index.html",
@@ -82,7 +82,7 @@
     {
         "path": "sitemap.xml",
         "type": "file",
-        "md5": "14cd5b65b51bc0dd80496007aef362c8"
+        "md5": "0d4451285750c4272ce2a9f30106f5bf"
     },
     {
         "path": "sitemap.xsl",
@@ -102,7 +102,7 @@
     {
         "path": "reader-2.html",
         "type": "file",
-        "md5": "9827c5a6371194d7d5b6a218568a82b8"
+        "md5": "8775147b586015d0dcba9c80047acd52"
     },
     {
         "path": "tags",

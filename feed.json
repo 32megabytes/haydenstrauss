@@ -14,7 +14,7 @@
             "url": "https://haydenstrauss.com/reader-2.html",
             "title": "InScribe",
             "summary": "InScribe is best experienced in a standalone format. Click here to maximise InScribe into a new tab. InScribe is a journaling and note-taking app designed for ease of use. All data is stored on the user's device, no account needed. This means you must export&hellip;",
-            "content_html": "<iframe loading=\"lazy\" width=\"100%\" height=\"640\" id=\"dynamic-iframe\" src=\"https://haydenstrauss.com/serve/inscribe/\" frameborder=\"0\" data-responsive=\"false\"></iframe>\n<p class=\"align-center\"><a href=\"https://haydenstrauss.com/serve/InScribe\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>InScribe is best experienced in a standalone format. Click here to maximise InScribe into a new tab.</strong></a></p>\n<p>InScribe is a journaling and note-taking app designed for ease of use. All data is stored on the user's device, no account needed. <strong>This means you must export your save file to avoid data loss. </strong>Planned features include cloud-based storage syncing and mobile device support. </p>",
+            "content_html": "<iframe loading=\"lazy\" width=\"100%\" height=\"640\" id=\"dynamic-iframe\" src=\"https://haydenstrauss.com/serve/apps/inscribe/\" frameborder=\"0\" data-responsive=\"false\"></iframe>\n<p class=\"align-center\"><a href=\"https://haydenstrauss.com/serve/inscribe\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>InScribe is best experienced in a standalone format. Click here to maximise InScribe into a new tab.</strong></a></p>\n<p>InScribe is a journaling and note-taking app designed for ease of use. All data is stored on the user's device, no account needed. <strong>This means you must export your save file to avoid data loss. </strong>Planned features include cloud-based storage syncing and mobile device support. </p>",
             "author": {
                 "name": "Hayden"
             },
@@ -23,7 +23,7 @@
                    "Accessibility"
             ],
             "date_published": "2025-01-28T20:43:06-05:00",
-            "date_modified": "2025-01-28T21:22:02-05:00"
+            "date_modified": "2025-01-28T21:25:32-05:00"
         },
         {
             "id": "https://haydenstrauss.com/reader.html",
