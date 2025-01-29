@@ -3,7 +3,7 @@
     <title>Hayden Strauss</title>
     <link href="https://haydenstrauss.com/feed.xml" rel="self" />
     <link href="https://haydenstrauss.com" />
-    <updated>2025-01-28T21:25:32-05:00</updated>
+    <updated>2025-01-28T21:28:27-05:00</updated>
     <author>
         <name>Hayden</name>
     </author>
@@ -14,12 +14,11 @@
         <author>
             <name>Hayden</name>
         </author>
-        <link href="https://haydenstrauss.com/reader-2.html"/>
-        <id>https://haydenstrauss.com/reader-2.html</id>
+        <link href="https://haydenstrauss.com/inscribe.html"/>
+        <id>https://haydenstrauss.com/inscribe.html</id>
             <category term="Tool"/>
-            <category term="Accessibility"/>
 
-        <updated>2025-01-28T20:43:06-05:00</updated>
+        <updated>2025-01-28T21:27:52-05:00</updated>
             <summary>
                 <![CDATA[
                     InScribe is best experienced in a standalone format. Click here to maximise InScribe into a new tab. InScribe is a journaling and note-taking app designed for ease of use. All data is stored on the user's device, no account needed. This means you must export&hellip;
@@ -28,7 +27,7 @@
         <content type="html">
             <![CDATA[
                 <iframe loading="lazy" width="100%" height="640" id="dynamic-iframe" src="https://haydenstrauss.com/serve/apps/inscribe/" frameborder="0" data-responsive="false"></iframe>
-<p class="align-center"><a href="https://haydenstrauss.com/serve/inscribe" target="_blank" rel="noopener noreferrer"><strong>InScribe is best experienced in a standalone format. Click here to maximise InScribe into a new tab.</strong></a></p>
+<p class="align-center"><a href="https://haydenstrauss.com/serve/apps/inscribe" target="_blank" rel="noopener noreferrer"><strong>InScribe is best experienced in a standalone format. Click here to maximise InScribe into a new tab.</strong></a></p>
 <p>InScribe is a journaling and note-taking app designed for ease of use. All data is stored on the user's device, no account needed. <strong>This means you must export your save file to avoid data loss. </strong>Planned features include cloud-based storage syncing and mobile device support. </p>
             ]]>
         </content>

@@ -2,22 +2,22 @@
     {
         "path": "404.html",
         "type": "file",
-        "md5": "a9def3d28903593182d431e7b7acaee7"
+        "md5": "a9c5bb151dc4586659f1681c0232e44e"
     },
     {
         "path": "feed.json",
         "type": "file",
-        "md5": "27bdf48e9e51813534d60e6f3df01416"
+        "md5": "8ed9f1061c8cec43612cc0367ad895c9"
     },
     {
         "path": "feed.xml",
         "type": "file",
-        "md5": "50452e7ac98563d42e0af219f422f18f"
+        "md5": "931e0ca14c3ed52e33d10c9d5255a9ca"
     },
     {
         "path": "index.html",
         "type": "file",
-        "md5": "eb97434e7d322314f0524e723b1e7f9f"
+        "md5": "5e8211df2b5e8b2f98436989b4112ad1"
     },
     {
         "path": "media",
@@ -82,7 +82,7 @@
     {
         "path": "sitemap.xml",
         "type": "file",
-        "md5": "0d4451285750c4272ce2a9f30106f5bf"
+        "md5": "cd9cd890474250791c3c696f5874cfee"
     },
     {
         "path": "sitemap.xsl",
@@ -92,17 +92,17 @@
     {
         "path": "reader.html",
         "type": "file",
-        "md5": "217b3aed69f2b02c73cd9f8622e8f753"
+        "md5": "2717520f7579ba2bf1b547b1a9516a00"
     },
     {
         "path": "about.html",
         "type": "file",
-        "md5": "727c262c38359dc862d4ccd82294f350"
+        "md5": "59259a363482c90fd1e827ea9e162e9e"
     },
     {
-        "path": "reader-2.html",
+        "path": "inscribe.html",
         "type": "file",
-        "md5": "8775147b586015d0dcba9c80047acd52"
+        "md5": "91a34e5d6c466858f6507d602f625252"
     },
     {
         "path": "tags",
@@ -117,7 +117,7 @@
     {
         "path": "/tags/accessibility/index.html",
         "type": "file",
-        "md5": "7e88e4a9738830e59ee342a037ab910b"
+        "md5": "02d07c5a3f4c857e2cc0bd4ad8f14378"
     },
     {
         "path": "tags/tool",
@@ -127,12 +127,12 @@
     {
         "path": "/tags/tool/index.html",
         "type": "file",
-        "md5": "6337882292a57b0cd9ce94919d9446b3"
+        "md5": "4e5d93ee138c7cc77efe9eb521f39f56"
     },
     {
         "path": "/tags/index.html",
         "type": "file",
-        "md5": "b683d1849da04199f4a4db67bc339967"
+        "md5": "3ff534c434f469e3b4acc51a61f288a0"
     },
     {
         "path": "authors",
@@ -147,7 +147,7 @@
     {
         "path": "/authors/2artisans/index.html",
         "type": "file",
-        "md5": "40e6b4d500517d92bc43a0ba242ac7ce"
+        "md5": "7c806caf77d40db5b24c67467a723bce"
     },
     {
         "path": "assets",
